@@ -1,0 +1,25 @@
+.dialog-backdrop { position:fixed; z-index:1100; inset:0; display:grid; place-items:center; overflow:auto; padding:22px; background:#10251bb0; }
+.dialog { width:min(720px,100%); max-height:min(92vh,900px); overflow:auto; border:1px solid #e6ece8; border-radius:18px; background:#fff; box-shadow:0 25px 90px #07150d45; }
+.dialog-heading { display:flex; justify-content:space-between; gap:18px; padding:24px 26px 19px; border-bottom:1px solid #edf0ee; }
+.eyebrow { margin:0 0 8px; color:#78857d; font-size:10px; font-weight:750; letter-spacing:.13em; }
+h2 { margin:0; color:#17211c; font:800 21px/1.2 'Manrope',sans-serif; letter-spacing:-.03em; }
+.dialog-heading p:last-child { margin:6px 0 0; color:#78857d; font-size:12px; }
+.icon-button { display:grid; width:34px; height:34px; flex:0 0 auto; place-items:center; border:0; border-radius:9px; background:#f2f5f3; color:#526158; font-size:22px; cursor:pointer; }
+form { padding:20px 26px 23px; }
+.form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:15px 17px; }
+label { display:flex; min-width:0; flex-direction:column; gap:7px; color:#46544b; font-size:11px; font-weight:700; }
+label > span { color:#bd5946; }
+input,select,textarea { width:100%; min-height:40px; padding:9px 11px; border:1px solid #dfe7e1; border-radius:9px; outline:none; background:white; color:#28372e; font:500 12px 'DM Sans',sans-serif; }
+textarea { min-height:80px; resize:vertical; }
+input:focus,select:focus,textarea:focus { border-color:#75ae86; box-shadow:0 0 0 3px #23835316; }
+input::placeholder,textarea::placeholder { color:#a1aaa4; }
+.full-width { grid-column:1/-1; }
+.hint { color:#929c95; font-size:10px; font-weight:400; }
+.field-error { color:#b3493b; font-size:10px; font-weight:500; }
+.form-actions { display:flex; justify-content:flex-end; gap:9px; margin-top:22px; padding-top:17px; border-top:1px solid #edf0ee; }
+.secondary-button,.primary-button { min-height:39px; padding:0 15px; border-radius:9px; font:650 12px 'DM Sans',sans-serif; cursor:pointer; }
+.secondary-button { border:1px solid #dfe7e1; background:#fff; color:#536158; }
+.primary-button { border:1px solid #238353; background:#238353; color:#fff; }
+.primary-button:hover { background:#1c7046; }
+.primary-button:disabled { opacity:.65; cursor:wait; }
+@media (max-width:560px) { .dialog-backdrop { align-items:end; padding:0; } .dialog { max-height:94vh; border-radius:18px 18px 0 0; } .dialog-heading { padding:20px 18px 16px; } form { padding:16px 18px 20px; } .form-grid { grid-template-columns:1fr; gap:13px; } .full-width { grid-column:auto; } }

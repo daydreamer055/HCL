@@ -1,0 +1,20 @@
+package com.stocksmart.dto;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+import jakarta.validation.constraints.Size;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+public record CreateSalesOrderRequest(
+        @NotBlank @Size(max = 40) String orderNumber,
+        @NotNull @Positive Long locationId,
+        LocalDateTime orderDate,
+        @Size(max = 150) String customerName,
+        @NotEmpty List<@Valid SalesOrderItemRequest> items
+) {
+}
