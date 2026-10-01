@@ -2,6 +2,8 @@
 
 Retail Inventory Management System
 
+[![CI](https://github.com/daydreamer055/HCL/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/daydreamer055/HCL/actions/workflows/ci.yml)
+
 ## Overview
 
 StockSmart is a full-stack retail inventory management application for tracking products and stock across multiple locations. It supports inventory operations, supplier and order workflows, barcode and RFID tracking, operational dashboards, and reports through a Spring Boot REST API and an Angular web application.
